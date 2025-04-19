@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { assets, CartIcon } from "@/assets/assets";
+import { assets, BagIcon, BoxIcon, CartIcon, HomeIcon } from "@/assets/assets";
 import Link from "next/link"
 import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
@@ -53,6 +53,13 @@ const Navbar = () => {
                 href="/cart"
               />
             </UserButton.MenuItems>
+            <UserButton.MenuItems>
+              <UserButton.Link
+                label="My Orders"
+                labelIcon={<BagIcon />}
+                href="/my-orders"
+              />
+            </UserButton.MenuItems>
 
           </UserButton>        </> : <button onClick={openSignIn} className="flex items-center gap-2 hover:text-gray-900 transition">
           <Image src={assets.user_icon} alt="user icon" />
@@ -68,9 +75,30 @@ const Navbar = () => {
 
             <UserButton.MenuItems>
               <UserButton.Link
+                label="Home"
+                labelIcon={<HomeIcon/>}
+                href="/"
+              />
+            </UserButton.MenuItems>
+            <UserButton.MenuItems>
+              <UserButton.Link
+                label="Products"
+                labelIcon={<BoxIcon/>}
+                href="/all-products"
+              />
+            </UserButton.MenuItems>
+            <UserButton.MenuItems>
+              <UserButton.Link
                 label="Cart"
                 labelIcon={<CartIcon/>}
                 href="/cart"
+              />
+            </UserButton.MenuItems>
+            <UserButton.MenuItems>
+              <UserButton.Link
+                label="My Orders"
+                labelIcon={<BagIcon/>}
+                href="/my-orders"
               />
             </UserButton.MenuItems>
           
