@@ -5,6 +5,7 @@ import { inngest, syncUserCreation, syncUserDelitaion, syncUserUpdation } from "
     client: inngest,
     functions: [
         syncUserCreation,
+        
         syncUserDelitaion,
         syncUserUpdation,
      ],
